@@ -34,7 +34,6 @@ public class Admin extends User {
 		int i=0;
 		String name1 = null,name2 = null,name3 = null,name4 = null;
 		String aname1 = null,aname2 = null,aname3 = null,aname4 = null;
-		String bname1 = null,aname2 = null,aname3 = null,aname4 = null;
 		
 		//while (in.hasNext())
 		for(int u=0; u<5; u++){
