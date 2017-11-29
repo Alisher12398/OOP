@@ -27,14 +27,14 @@ public class Admin extends User {
 	}
 
 	public static void addUser() throws IOException {
-		System.out.println("Введите нового пользователя в формате:" + "\n" + "Имя" + "\n" + "Фамилия" + "\n" + "ID" + "\n" + "Пароль");
+		System.out.println("Г‚ГўГҐГ¤ГЁГІГҐ Г­Г®ГўГ®ГЈГ® ГЇГ®Г«ГјГ§Г®ГўГ ГІГҐГ«Гї Гў ГґГ®Г°Г¬Г ГІГҐ:" + "\n" + "Г€Г¬Гї" + "\n" + "Г”Г Г¬ГЁГ«ГЁГї" + "\n" + "ID" + "\n" + "ГЏГ Г°Г®Г«Гј");
 		
 		Scanner in = new Scanner(System.in);
 		
 		int i=0;
 		String name1 = null,name2 = null,name3 = null,name4 = null;
 		String aname1 = null,aname2 = null,aname3 = null,aname4 = null;
-		
+		String bname1 = null,bname2 = null,bname3 = null,bname4 = null;
 		
 		//while (in.hasNext())
 		for(int u=0; u<5; u++){
@@ -73,9 +73,9 @@ public class Admin extends User {
 		userDataList.add(new User(name1,name2,name3,name4));
 		System.out.println("***" + "New user" +  " ***");
 		
-		BufferedReader bf = new BufferedReader(new FileReader("C:\\Users\\Алишер\\eclipse-workspace\\Project2\\output.txt"));
-		BufferedWriter bw = new BufferedWriter(new FileWriter("C:\\Users\\Алишер\\eclipse-workspace\\Project2\\output.txt"));
-		//File file = new File("C:\\Users\\Алишер\\eclipse-workspace\\Project2\\output2.txt");
+		BufferedReader bf = new BufferedReader(new FileReader("C:\\Users\\ГЂГ«ГЁГёГҐГ°\\eclipse-workspace\\Project2\\output.txt"));
+		BufferedWriter bw = new BufferedWriter(new FileWriter("C:\\Users\\ГЂГ«ГЁГёГҐГ°\\eclipse-workspace\\Project2\\output.txt"));
+		//File file = new File("C:\\Users\\ГЂГ«ГЁГёГҐГ°\\eclipse-workspace\\Project2\\output2.txt");
 		 
 		try{
 			 //PrintWriter pw = new PrintWriter(new FileOutputStream(file));
@@ -102,17 +102,17 @@ public class Admin extends User {
 	}
 	
 	public static void updateUser() throws IOException {
-		System.out.println("Введите ID студента");
+		System.out.println("Г‚ГўГҐГ¤ГЁГІГҐ ID Г±ГІГіГ¤ГҐГ­ГІГ ");
 		String ID2;
 		Scanner in = new Scanner(System.in);
 		ID2=in.nextLine();
 				
-		BufferedReader bf1 = new BufferedReader(new FileReader("C:\\Users\\Алишер\\eclipse-workspace\\Project2\\output.txt"));
-		BufferedWriter bw1 = new BufferedWriter(new FileWriter("C:\\Users\\Алишер\\eclipse-workspace\\Project2\\output.txt"));
+		BufferedReader bf1 = new BufferedReader(new FileReader("C:\\Users\\ГЂГ«ГЁГёГҐГ°\\eclipse-workspace\\Project2\\output.txt"));
+		BufferedWriter bw1 = new BufferedWriter(new FileWriter("C:\\Users\\ГЂГ«ГЁГёГҐГ°\\eclipse-workspace\\Project2\\output.txt"));
 		
 		for (int i=0; i<userDataList.size(); i++) {
 			if (userDataList.get(i).equals(ID2)) {
-				System.out.println("Введите поле, которые хотите заменить");
+				System.out.println("Г‚ГўГҐГ¤ГЁГІГҐ ГЇГ®Г«ГҐ, ГЄГ®ГІГ®Г°Г»ГҐ ГµГ®ГІГЁГІГҐ Г§Г Г¬ГҐГ­ГЁГІГј");
 				Scanner sc= new Scanner(System.in);
 				String updateField=in.nextLine();
 				try {
