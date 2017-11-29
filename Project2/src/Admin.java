@@ -27,7 +27,7 @@ public class Admin extends User {
 	}
 
 	public static void addUser() throws IOException {
-		System.out.println("Введите нового пользователя в формате:" + "\n" + "Имя" + "\n" + "Фамилия" + "\n" + "ID" + "\n" + "Пароль");
+		System.out.println("Write info about new User" + "\n" + "Name" + "\n" + "Surname" + "\n" + "ID" + "\n" + "Password");
 		
 		Scanner in = new Scanner(System.in);
 		
@@ -73,9 +73,9 @@ public class Admin extends User {
 		userDataList.add(new User(name1,name2,name3,name4));
 		System.out.println("***" + "New user" +  " ***");
 		
-		BufferedReader bf = new BufferedReader(new FileReader("C:\\Users\\Алишер\\eclipse-workspace\\Project2\\output.txt"));
-		BufferedWriter bw = new BufferedWriter(new FileWriter("C:\\Users\\Алишер\\eclipse-workspace\\Project2\\output.txt"));
-		//File file = new File("C:\\Users\\Алишер\\eclipse-workspace\\Project2\\output2.txt");
+		BufferedReader bf = new BufferedReader(new FileReader("C:\\OOPGit\\OOP\\Project2output.txt"));
+		BufferedWriter bw = new BufferedWriter(new FileWriter("C:\\OOPGit\\OOP\\Project2\\output.txt"));
+	
 		 
 		try{
 			 //PrintWriter pw = new PrintWriter(new FileOutputStream(file));
@@ -102,17 +102,17 @@ public class Admin extends User {
 	}
 	
 	public static void updateUser() throws IOException {
-		System.out.println("Введите ID студента");
+		System.out.println("Write Student's ID");
 		String ID2;
 		Scanner in = new Scanner(System.in);
 		ID2=in.nextLine();
 				
-		BufferedReader bf1 = new BufferedReader(new FileReader("C:\\Users\\Алишер\\eclipse-workspace\\Project2\\output.txt"));
-		BufferedWriter bw1 = new BufferedWriter(new FileWriter("C:\\Users\\Алишер\\eclipse-workspace\\Project2\\output.txt"));
+		BufferedReader bf1 = new BufferedReader(new FileReader("C:\\OOPGit\\OOP\\Project2output.txt"));
+		BufferedWriter bw1 = new BufferedWriter(new FileWriter("C:\\OOPGit\\OOP\\Project2\\output.txt"));
 		
 		for (int i=0; i<userDataList.size(); i++) {
 			if (userDataList.get(i).equals(ID2)) {
-				System.out.println("Введите поле, которые хотите заменить");
+				System.out.println("What do you want to change?");
 				Scanner sc= new Scanner(System.in);
 				String updateField=in.nextLine();
 				try {
