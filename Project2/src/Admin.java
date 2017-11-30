@@ -24,7 +24,7 @@ public class Admin extends User {
 		updateUser();
 		
 	}
-// Authorization aa
+// Authorization aaa
 	public static void addUser() throws IOException {
 		System.out.println("Write info about new User" + "\n" + "Name" + "\n" + "Surname" + "\n" + "ID" + "\n" + "Password");
 		
