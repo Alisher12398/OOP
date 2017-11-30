@@ -26,16 +26,18 @@ public class DB {
 				}   
 			
 			Student.Calculate();
+			
 		BufferedReader bf2 = new BufferedReader(new FileReader("C:\\OOPGit\\OOP\\Project2\\students.txt"));
 		BufferedWriter bw2 = new BufferedWriter(new FileWriter("C:\\OOPGit\\OOP\\Project2\\students.txt"));
 		
 		try {
 			for (int q=0; q<studentDataList.size(); q++) {
 				bw2.write(studentDataList.get(q).id);
-	      	    bw2.write((int) (studentDataList.get(q).attestation_1) );
-	      	    bw2.write((int) (studentDataList.get(q).attestation_2) );
-	      	    bw2.write((int) (studentDataList.get(q).finalexam) );
+	      	    bw2.write(studentDataList.get(q).att1);
+	      	   // bw2.write((int) (studentDataList.get(q).attestation_2) );
+	      	   // bw2.write((int) (studentDataList.get(q).finalexam) );
 	      	  	bw2.newLine();	
+	      	  	System.out.println(Student.att1);
 			}
 		} catch(IOException e) {};
 		

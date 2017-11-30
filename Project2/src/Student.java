@@ -17,11 +17,13 @@ public class Student extends User implements Serializable{
 	}
 	
 	protected static double attestation_1=0, attestation_2=0, overall=0;
+	public static int att1;
 	
 	public static void Calculate(){
 	attestation_1 = lab_1_1 + lab_1_2 + lab_1_3 + lab_1_4 + lab_1_5 + mid;
 	attestation_2 = lab_2_1 + lab_2_2 + lab_2_3 + lab_2_4 + lab_2_5 + end;
 	overall = attestation_1+attestation_2+finalexam;
+	
 	}
 	public Student (String id, double lab_1_1, double lab_1_2, double lab_1_3, double lab_1_4, double lab_1_5, double lab_1_6, double lab_2_1, 
 			double lab_2_2, double lab_2_3, double lab_2_4, double lab_2_5, double lab_2_6, double quiz_1, double quiz_2, double mid, double end, double finalexam) {
@@ -43,11 +45,11 @@ public class Student extends User implements Serializable{
 		this.finalexam=finalexam;
 	}
 	
-	public Student (String id, double attestation_1, double attestation_2, double finalexam) {
+	public Student (String id, double attestation_1) {
 		this.id=id;
 		this.attestation_1=attestation_1;
-		this.attestation_2=attestation_2;
-		this.finalexam=finalexam;
+		//this.attestation_2=attestation_2;
+		//this.finalexam=finalexam;
 	}
 	/*
 	int yearStudy;
