@@ -15,7 +15,8 @@ import java.util.List;
 public class DB {
 	 static List<User> userDataList = new ArrayList<User>();
 	 static List<Student> studentDataList = new ArrayList<Student>();
-	 
+	 static List<Course> courses = new ArrayList<Course>();
+		
 	 
 	 public static void transferToStudent() throws IOException  {
 			for (int i = 0; i < userDataList.size(); i++) {
@@ -23,9 +24,7 @@ public class DB {
 					String a = userDataList.get(i).id;
 					studentDataList.add(new Student(a));
 				}
-	 
-	 
-	 
+	
 		BufferedReader bf2 = new BufferedReader(new FileReader("C:\\OOPGit\\OOP\\Project2\\students.txt"));
 		BufferedWriter bw2 = new BufferedWriter(new FileWriter("C:\\OOPGit\\OOP\\Project2\\students.txt"));
 		
