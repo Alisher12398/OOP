@@ -11,7 +11,7 @@ public class Teacher extends Employee {
 		
 	}
 	
-	public String manageCourseFiles() {
+	public void manageCourseFiles() {
 	
 	}
 	

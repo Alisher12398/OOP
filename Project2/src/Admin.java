@@ -61,9 +61,9 @@ public class Admin extends User {
 			}
 			
 		}
-		int q=userDataList.size();
+		int q=DB.userDataList.size();
 		
-		userDataList.add(new User(name1,name2,name3,name4,name5));
+		DB.userDataList.add(new User(name1,name2,name3,name4,name5));
 		System.out.println("***" + "New user" +  " ***");
 		
 		BufferedReader bf = new BufferedReader(new FileReader("C:\\OOPGit\\OOP\\Project2\\output.txt"));
@@ -85,8 +85,8 @@ public class Admin extends User {
 		BufferedWriter bw2 = new BufferedWriter(new FileWriter("C:\\OOPGit\\OOP\\Project2\\output.txt"));
 		
 		try {
-			for (int q=0; q<userDataList.size(); q++) {
-				bw2.write(userDataList.get(q).name + " " + userDataList.get(q).surname + " " + userDataList.get(q).id + " " + userDataList.get(q).password);
+			for (int q=0; q<DB.userDataList.size(); q++) {
+				bw2.write(DB.userDataList.get(q).name + " " + DB.userDataList.get(q).surname + " " + DB.userDataList.get(q).id + " " + DB.userDataList.get(q).password + " " + DB.userDataList.get(q).status);
 	      	  	bw2.newLine();	
 			}
 		} catch(Exception e) {};
@@ -109,8 +109,8 @@ public class Admin extends User {
 		BufferedReader bf1 = new BufferedReader(new FileReader("C:\\OOPGit\\OOP\\Project2\\output.txt"));
 		BufferedWriter bw1 = new BufferedWriter(new FileWriter("C:\\OOPGit\\OOP\\Project2\\output.txt"));
 		
-		for (int i=0; i<userDataList.size(); i++) {
-			if (userDataList.get(i).id.equals(ID2)) {
+		for (int i=0; i<DB.userDataList.size(); i++) {
+			if (DB.userDataList.get(i).id.equals(ID2)) {
 				System.out.println("What do you want to change? (name, surname, password, id");
 				String updateField=in.nextLine();
 			
@@ -119,14 +119,14 @@ public class Admin extends User {
 				case "name":
 					System.out.println("Write new name");
 					updateField=in.nextLine();
-					userDataList.get(i).name= updateField;
+					DB.userDataList.get(i).name= updateField;
 					WritetoFile();
 					break;
 					
 				case "surname":
 					System.out.println("Write new surname");
 					updateField=in.nextLine();
-					userDataList.get(i).surname= updateField;
+					DB.userDataList.get(i).surname= updateField;
 					WritetoFile();
 					break;
 					
@@ -134,14 +134,14 @@ public class Admin extends User {
 				case "password":
 					System.out.println("Write new password");
 					updateField=in.nextLine();
-					userDataList.get(i).password= updateField;
+					DB.userDataList.get(i).password= updateField;
 					WritetoFile();
 					break;
 					
 				case "id":
 					System.out.println("Write new id");
 					updateField=in.nextLine();
-					userDataList.get(i).password= updateField;
+					DB.userDataList.get(i).password= updateField;
 					WritetoFile();
 					break;	
 				}

@@ -13,7 +13,6 @@ public class User {
  protected String password;
  protected String status;
 
- static List<User> userDataList = new ArrayList<User>();
  
  protected static String id;
 
@@ -45,11 +44,11 @@ public class User {
 		
 		boolean reg=false; 
 		
-		for (int i=0; i<userDataList.size(); i++) {
-			if (userDataList.get(i).id.equals(loginID)) {	
+		for (int i=0; i<DB.userDataList.size(); i++) {
+			if (DB.userDataList.get(i).id.equals(loginID)) {	
 				System.out.println("Write your password here");
 				String loginPassword=in.nextLine();
-					if (userDataList.get(i).password.equals(loginPassword)) {
+					if (DB.userDataList.get(i).password.equals(loginPassword)) {
 						reg=true;
 					}
 			}

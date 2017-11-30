@@ -12,11 +12,12 @@ public class Manager extends Employee {
     	Scanner t= new Scanner(System.in);
     	String TeacherID=t.nextLine();
     	
-    	
-    	
-    	
+    	for (int i=0; i<DB.userDataList.size(); i++) {
+			if (DB.userDataList.get(i).id.equals(TeacherID)) {
+				
+			}
     }
-
+    }
     /**
      * @return 
      */
