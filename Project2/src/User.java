@@ -1,10 +1,19 @@
 import java.lang.*;
+import java.util.stream.*;
+import java.io.*;
+import java.util.stream.*;
+import java.io.*;
+import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
 
 public class User {
  protected String name;
  protected String surname;
  protected String password;
 
+ static List<User> userDataList = new ArrayList<User>();
+ 
  protected String id;
 
  public void setName(String name) {
@@ -22,6 +31,39 @@ public class User {
   public String getId() {
         return null;
     }
+  
+  public static void LogIn() throws IOException {
+		BufferedReader bf = new BufferedReader(new FileReader("C:\\OOPGit\\OOP\\Project2\\output.txt"));
+		BufferedWriter bw = new BufferedWriter(new FileWriter("C:\\OOPGit\\OOP\\Project2\\output.txt"));
+		Scanner in = new Scanner(System.in);
+		
+		System.out.println("Please, Log In");
+		
+		System.out.println("Write your ID here");
+		String loginID=in.nextLine();
+		
+		boolean reg=false; 
+		
+		for (int i=0; i<userDataList.size(); i++) {
+			if (userDataList.get(i).id.equals(loginID)) {	
+				System.out.println("Write your password here");
+				String loginPassword=in.nextLine();
+					if (userDataList.get(i).password.equals(loginPassword)) {
+						reg=true;
+					}
+			}
+		
+		}
+		
+		if (reg==true) {
+			System.out.println("Access razreshen");
+		}
+		else {
+			System.out.println("Access ne razhreshen");
+		}
+		bf.close();
+		bw.close();
+  }
   
   public User() { } 
 

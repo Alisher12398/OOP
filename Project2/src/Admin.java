@@ -11,20 +11,16 @@ import java.util.Scanner;
 import java.util.List;
 
 public class Admin extends User {
-	static List<User> userDataList = new ArrayList<User>();
+	
 	public static void main(String args[]) throws IOException {
-		/*RandomAccessFile Rw= null;
-		try{
-			Rw= new RandomAccessFile("a.txt", "rw");
-		}
-		catch (IOException e) {}*/
 		
 		addUser();
 		addUser();
-		updateUser();
+		//updateUser();
+		LogIn();
 		
 	}
-// Authorization aaaqwq
+
 	public static void addUser() throws IOException {
 		System.out.println("Write info about new User" + "\n" + "Name" + "\n" + "Surname" + "\n" + "ID" + "\n" + "Password");
 		
