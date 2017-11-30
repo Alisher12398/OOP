@@ -1,5 +1,5 @@
-/**
- */
-	public interface CourseFile {
+
+	public class CourseFile {
+	
 }
 
