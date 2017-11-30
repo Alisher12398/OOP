@@ -1,11 +1,20 @@
+import java.util.Scanner;
+
 /**
  */
 public class Manager extends Employee {
     /**
      * @return 
      */
-    public int addCourse() {
-        return 0;
+    public void addCourse(Course course) {
+    	
+    	System.out.println("To add course write Teacher's ID");
+    	Scanner t= new Scanner(System.in);
+    	String TeacherID=t.nextLine();
+    	
+    	
+    	
+    	
     }
 
     /**

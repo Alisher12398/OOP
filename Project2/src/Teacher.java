@@ -3,9 +3,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Teacher extends Employee {
-	private ArrayList<Course> courses = new ArrayList<>();
-	private ArrayList<Student> students = new ArrayList<>();
-	 
+	List<Course> courses = new ArrayList<Course>();
+	
+	
 	
 	public void viewCourse() {
 		
