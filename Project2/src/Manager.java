@@ -14,7 +14,7 @@ public class Manager extends Employee {
     	
     	for (int i=0; i<DB.userDataList.size(); i++) {
 			if (DB.userDataList.get(i).id.equals(TeacherID)) {
-				
+			
 			}
     }
     }

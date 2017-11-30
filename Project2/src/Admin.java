@@ -16,8 +16,10 @@ public class Admin extends User {
 		
 		addUser();
 		addUser();
+		//addUser();
+		//removeUser();
 		//updateUser();
-		LogIn();
+		//LogIn();
 	//	
 	}
 
@@ -152,7 +154,25 @@ public class Admin extends User {
 		bf1.close();
 	}
 	
-	public void removeUser() {
+	public static void removeUser() throws IOException {
+		/*System.out.println("Write Student's ID");
+		String ID3;
+		Scanner in = new Scanner(System.in);
+		ID3=in.nextLine();
+
+		BufferedReader bf2 = new BufferedReader(new FileReader("C:\\OOPGit\\OOP\\Project2\\output.txt"));
+		BufferedWriter bw2 = new BufferedWriter(new FileWriter("C:\\OOPGit\\OOP\\Project2\\output.txt"));
+		
+		for (int i=0; i<DB.userDataList.size(); i++) {
+			if (DB.userDataList.get(i).id.equals(ID3)) {
+				//DB.userDataList.remove(i);
+				DB.userDataList.remove(DB.userDataList.get(i));
+				}
+			}
+		
+		WritetoFile();
+		bf2.close();
+		bw2.close();*/
 		
 	}
 	
