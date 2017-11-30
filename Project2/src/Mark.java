@@ -3,26 +3,28 @@
 public class Mark extends Student {
     /**
      */
-    public int Lab;
+    public double Lab;
 
     /**
      */
-    public int Mid;
+    public double Mid;
 
     /**
      */
-    public int End;
+    public double End;
 
     /**
      */
-    public int Final;
+    public double Final;
 
     /**
      */
-    public int Attendance;
+    public double Attendance;
 
     /**
      */
-    public int Quiz;
+    public double Quiz;
+    
+    public Grade total;
 }
 
