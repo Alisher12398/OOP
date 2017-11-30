@@ -11,10 +11,11 @@ public class User {
  protected String name;
  protected String surname;
  protected String password;
+ protected String status;
 
  static List<User> userDataList = new ArrayList<User>();
  
- protected String id;
+ protected static String id;
 
  public void setName(String name) {
 	 this.name = name;
@@ -60,6 +61,7 @@ public class User {
 		}
 		else {
 			System.out.println("Access ne razhreshen");
+			LogIn();
 		}
 		bf.close();
 		bw.close();
@@ -67,11 +69,12 @@ public class User {
   
   public User() { } 
 
-  public User(String name, String surname, String id, String password) {
+  public User(String name, String surname, String id, String password, String status) {
      this.name = name;
      this.surname = surname;
      this.id = id;
      this.password = password;
+     this.status = status;
     
   }
 }

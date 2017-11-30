@@ -27,7 +27,7 @@ public class Admin extends User {
 		Scanner in = new Scanner(System.in);
 		
 		int i=0;
-		String name1 = null,name2 = null,name3 = null,name4 = null;
+		String name1 = null,name2 = null,name3 = null,name4 = null,name5=null;
 		
 		for(int u=0; u<5; u++){
 			
@@ -54,10 +54,16 @@ public class Admin extends User {
 				System.out.println("***" + "New" + " ***");
 				i++;
 			}
+			if (i==4) {
+				name5=in.nextLine();
+				System.out.println("***" + "New" + " ***");
+				i++;
+			}
 			
 		}
 		int q=userDataList.size();
-		userDataList.add(new User(name1,name2,name3,name4));
+		
+		userDataList.add(new User(name1,name2,name3,name4,name5));
 		System.out.println("***" + "New user" +  " ***");
 		
 		BufferedReader bf = new BufferedReader(new FileReader("C:\\OOPGit\\OOP\\Project2\\output.txt"));
