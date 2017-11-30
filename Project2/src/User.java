@@ -14,7 +14,7 @@ public class User {
  protected String status;
  
  
- protected static String id;
+ protected String id;
 
  
  
