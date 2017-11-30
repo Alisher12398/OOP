@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Teacher extends Employee {
-	
+	Title title;
 	
 	public void viewCourse() {
 		for (int i=0; i<DB.courses.size(); i++) {

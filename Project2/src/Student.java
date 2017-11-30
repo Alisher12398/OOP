@@ -6,9 +6,9 @@ import java.util.Vector;
 
 
 public class Student extends User implements Serializable{
-	private double lab_1_1, lab_1_2, lab_1_3, lab_1_4, lab_1_5;
-	private double lab_2_1, lab_2_2, lab_2_3, lab_2_4, lab_2_5;
-	private double quiz_1, quiz_2;
+	protected static double lab_1_1, lab_1_2, lab_1_3, lab_1_4, lab_1_5;
+	protected static double lab_2_1, lab_2_2, lab_2_3, lab_2_4, lab_2_5;
+	protected static double quiz_1, quiz_2, mid, end, finalexam;
 	String id;
 	private Grade grade;
 	
@@ -16,7 +16,39 @@ public class Student extends User implements Serializable{
 		this.id = id;
 	}
 	
+	protected static double attestation_1=0, attestation_2=0, overall=0;
 	
+	public static void Calculate(){
+	attestation_1 = lab_1_1 + lab_1_2 + lab_1_3 + lab_1_4 + lab_1_5 + mid;
+	attestation_2 = lab_2_1 + lab_2_2 + lab_2_3 + lab_2_4 + lab_2_5 + end;
+	overall = attestation_1+attestation_2+finalexam;
+	}
+	public Student (String id, double lab_1_1, double lab_1_2, double lab_1_3, double lab_1_4, double lab_1_5, double lab_1_6, double lab_2_1, 
+			double lab_2_2, double lab_2_3, double lab_2_4, double lab_2_5, double lab_2_6, double quiz_1, double quiz_2, double mid, double end, double finalexam) {
+		this.id=id;
+		this.lab_1_1=lab_1_1;
+		this.lab_1_2=lab_1_2;
+		this.lab_1_3=lab_1_3;
+		this.lab_1_4=lab_1_4;
+		this.lab_1_5=lab_1_5;
+		this.lab_2_1=lab_2_1;
+		this.lab_2_2=lab_2_2;
+		this.lab_2_3=lab_2_3;
+		this.lab_2_4=lab_2_4;
+		this.lab_2_5=lab_2_5;
+		this.quiz_1=quiz_1;
+		this.quiz_2=quiz_2;
+		this.mid=mid;
+		this.end=end;
+		this.finalexam=finalexam;
+	}
+	
+	public Student (String id, double attestation_1, double attestation_2, double finalexam) {
+		this.id=id;
+		this.attestation_1=attestation_1;
+		this.attestation_2=attestation_2;
+		this.finalexam=finalexam;
+	}
 	/*
 	int yearStudy;
 	Vector<Course> course = new Vector<Course>();

@@ -11,6 +11,9 @@ public class Employee extends User {
     public void sendReport() {
     }
     
+    public static void CountSalary() {
+    	
+    }
     
 }
 

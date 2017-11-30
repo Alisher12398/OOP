@@ -22,15 +22,19 @@ public class DB {
 			for (int i = 0; i < userDataList.size(); i++) {
 				if (userDataList.get(i).status.equals("student")) {
 					String a = userDataList.get(i).id;
-					studentDataList.add(new Student(a));
-				}
-	
+					studentDataList.add(new Student(a,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0));
+				}   
+			
+			Student.Calculate();
 		BufferedReader bf2 = new BufferedReader(new FileReader("C:\\OOPGit\\OOP\\Project2\\students.txt"));
 		BufferedWriter bw2 = new BufferedWriter(new FileWriter("C:\\OOPGit\\OOP\\Project2\\students.txt"));
 		
 		try {
 			for (int q=0; q<studentDataList.size(); q++) {
 				bw2.write(studentDataList.get(q).id);
+	      	    bw2.write((int) (studentDataList.get(q).attestation_1) );
+	      	    bw2.write((int) (studentDataList.get(q).attestation_2) );
+	      	    bw2.write((int) (studentDataList.get(q).finalexam) );
 	      	  	bw2.newLine();	
 			}
 		} catch(IOException e) {};
