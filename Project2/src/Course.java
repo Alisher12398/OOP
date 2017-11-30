@@ -1,14 +1,14 @@
-import java.lang.*;
+import java.util.*;
 
-/**
- */
-public class Course extends Teacher {
-    /**
-     */
-    private int credits;
-
-    /**
-     */
-    private String title;
-}
-
+public abstract  class Course {
+	private Teacher teacher;
+	private Student[] students;
+	private User id;
+	
+	protected Course(int maxStudents, Teacher teacher) {
+		students = new Student[maxStudents];
+		this.teacher = teacher;
+		
+		
+	}
+} 

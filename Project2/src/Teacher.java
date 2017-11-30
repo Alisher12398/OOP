@@ -1,46 +1,29 @@
 import java.lang.*;
+import java.util.ArrayList;
+import java.util.List;
 
-/**
- */
-public class Teacher extends Employee implements CourseFile {
-    /**
-     */
-    private int amountofCourse;
-
-    /**
-     */
-    public String description;
-
-    /**
-     * @return 
-     */
-    public String putMark() {
-        return null;
-    }
-
-    /**
-     */
-    public void putAttendance() {
-    }
-
-    /**
-     */
-    public void addFiles() {
-    }
-
-    /**
-     */
-    public void deleteFiles() {
-    }
-
-    /**
-     */
-    public void sendOrder() {
-    }
-
-    /**
-     */
-    public void operation7() {
-    }
+public class Teacher extends Employee {
+	private ArrayList<Course> courses = new ArrayList<>();
+	private ArrayList<Student> students = new ArrayList<>();
+	 
+	
+	public void viewCourse() {
+		
+	}
+	
+	public String manageCourseFiles() {
+	
+	}
+	
+	public void viewStudents() {
+		
+	}
+	
+	public void putMarks() {
+		
+	}
+	
+	public void sendOrder() {
+		
+	}
 }
-
