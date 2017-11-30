@@ -16,7 +16,8 @@ public class Admin extends User {
 		
 		addUser();
 		addUser();
-		//addUser();
+		addUser();
+		DB.transferToStudent();
 		//removeUser();
 		//updateUser();
 		//LogIn();

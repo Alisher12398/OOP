@@ -6,6 +6,18 @@ import java.util.Vector;
 
 
 public class Student extends User implements Serializable{
+	private double lab_1_1, lab_1_2, lab_1_3, lab_1_4, lab_1_5;
+	private double lab_2_1, lab_2_2, lab_2_3, lab_2_4, lab_2_5;
+	private double quiz_1, quiz_2;
+	private String a;
+	private Grade grade;
+	
+	public Student(String a) {
+		this.a = a;
+	}
+	
+	
+	/*
 	int yearStudy;
 	Vector<Course> course = new Vector<Course>();
 	HashMap<Course, Vector<Mark>> mark = new HashMap<Course, Vector<Mark>>();
@@ -138,7 +150,7 @@ public class Student extends User implements Serializable{
 		return "Student [yearStudy=" + yearStudy + ", getSurname()="
 				+ getSurname() + ", getName()=" + getName() + "]";
 	}
-	
+	*/
 	
 	
 

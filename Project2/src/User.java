@@ -16,6 +16,8 @@ public class User {
  
  protected static String id;
 
+ 
+ 
  public void setName(String name) {
 	 this.name = name;
     }
