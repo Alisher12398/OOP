@@ -22,7 +22,7 @@ public class DB {
 			for (int i = 0; i < userDataList.size(); i++) {
 				if (userDataList.get(i).status.equals("student")) {
 					String a = userDataList.get(i).id;
-					studentDataList.add(new Student(a,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0));
+					studentDataList.add(new Student(a));
 				}
 				
 			Student.Calculate();
