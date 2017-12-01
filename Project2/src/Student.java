@@ -22,8 +22,8 @@ public class Student extends User implements Serializable{
 	public static int att1;
 	
 	public static void Calculate(){
-	attestation_1 = lab_1_1 + lab_1_2 + lab_1_3 + lab_1_4 + lab_1_5 + mid;
-	attestation_2 = lab_2_1 + lab_2_2 + lab_2_3 + lab_2_4 + lab_2_5 + end;
+	//attestation_1 = lab_1_1 + lab_1_2 + lab_1_3 + lab_1_4 + lab_1_5 + mid;
+	//attestation_2 = lab_2_1 + lab_2_2 + lab_2_3 + lab_2_4 + lab_2_5 + end;
 	overall = attestation_1+attestation_2+finalexam;
 	
 	}

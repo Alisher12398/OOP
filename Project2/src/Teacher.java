@@ -1,4 +1,5 @@
 import java.io.Serializable;
+
 import java.lang.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -10,9 +11,7 @@ public class Teacher extends Employee implements Serializable {
 	private Degree degree = Degree.MASTER;
 	Vector<Course> courses = new Vector<Course>();
 	public Teacher() {}
-	public Teacher(User teach) {
-		
-	}
+	
 	public String a;
 	public Teacher(String a) {
 		this.a=a;
@@ -34,8 +33,10 @@ public class Teacher extends Employee implements Serializable {
 		
 		System.out.println("Press 1 to view courses");
 		System.out.println("Press 2 to view students");
-		System.out.println("Press 3 to put marks");
-		System.out.println("Press 4 to send order");
+		System.out.println("Press 3 to put marks to 1st attestation");
+		System.out.println("Press 4 to put marks to 2nd attestation");
+		System.out.println("Press 5 to put marks to final exam");
+		System.out.println("Press 6 to send order");
 		
 		int method=sc.nextInt();
 		
@@ -50,14 +51,20 @@ public class Teacher extends Employee implements Serializable {
 			break;
 
 		case 3:
-			putMarks();
+			putMarks1();
 			break;
 			
 		case 4:
-			sendOrder();
+			putMarks2();
 			break;
 			
+		case 5:
+			putMarks3();
+			break;	
 		
+		case 6:
+			sendReport();
+			break;	
 		}
 		
 	}
@@ -66,7 +73,54 @@ public class Teacher extends Employee implements Serializable {
 		
 	}
 	
-	public static void putMarks() {
+	public static  void putMarks1() {
+		System.out.println("Enter Student's ID");
+		Scanner sc=new Scanner(System.in);
+		
+		String id=sc.nextLine();
+		
+		double m = 0;
+		System.out.println("Enter a mark");
+		
+		for (int i=0; i<DB.studentDataList.size(); i++) {
+			if (DB.studentDataList.get(i).equals(id)) {
+				DB.studentDataList.get(i).attestation_1=Student.attestation_1+m;
+			}
+		}
+		
+	}
+	
+	public static void putMarks2() {
+		System.out.println("Enter Student's ID");
+		Scanner sc=new Scanner(System.in);
+		
+		String id=sc.nextLine();
+		
+		double m=0;
+		System.out.println("Enter a mark");
+		
+		for (int i=0; i<DB.studentDataList.size(); i++) {
+			if (DB.studentDataList.get(i).equals(id)) {
+				DB.studentDataList.get(i).attestation_2=Student.attestation_2+m;
+			}
+		}
+		
+	}
+	
+	public static void putMarks3() {
+		System.out.println("Enter Student's ID");
+		Scanner sc=new Scanner(System.in);
+		
+		String id=sc.nextLine();
+		
+		double m=0;
+		System.out.println("Enter a mark");
+		
+		for (int i=0; i<DB.studentDataList.size(); i++) {
+			if (DB.studentDataList.get(i).equals(id)) {
+				DB.studentDataList.get(i).finalexam=Student.finalexam+m;
+			}
+		}
 		
 	}
 	
