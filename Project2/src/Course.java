@@ -31,7 +31,7 @@ public class Course {
 		return courseFiles;
 	}
 	
-	public void setCourseFiles(String courseFiles) {
+	public void setCourseFiles(String courseFiles) { 
 		this.courseFiles = courseFiles;
 	}
 	

@@ -18,8 +18,12 @@ public class IntranetTester {
 		
 		System.out.println("Your Name: " + User.currentName);
 		System.out.println("Your status: " + User.currentStatus + "\n");
-		Teacher a=new Teacher(); 
-		a.AvailableMethods();
+		//Teacher a=new Teacher(); 
+		//a.AvailableMethods();
+		Student a= new Student();
+		//a.AvailableMethods();
+		
+		DB.transferToTeacher();
 	}
 
 }

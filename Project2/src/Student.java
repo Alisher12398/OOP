@@ -16,6 +16,8 @@ public class Student extends User implements Serializable{
 		this.id = id;
 	}
 	
+	public Student() {}
+	
 	protected static double attestation_1=0, attestation_2=0, overall=0;
 	public static int att1;
 	
@@ -53,9 +55,7 @@ Scanner sc=new Scanner(System.in);
 		System.out.println("Press 3 to view course files");
 		System.out.println("Press 4 to info about teacher of a specific course");
 		System.out.println("Press 5 to view marks");
-		System.out.println("Press 6 to view transcript");
-		System.out.println("Press 7 to rate teachers");
-		System.out.println("Press 8 to get transcript");
+		System.out.println("Press 6 to rate teachers");
 		int method=sc.nextInt();
 		
 		switch (method) {
@@ -79,13 +79,7 @@ Scanner sc=new Scanner(System.in);
 			viewMarks();
 			break;
 		case 6:
-			viewTranscript();
-			break;
-		case 7:
 			rateTeachers();
-			break;
-		case 8: 
-			getTranscript();
 			break;
 		
 		}
@@ -97,9 +91,7 @@ Scanner sc=new Scanner(System.in);
 	public static void viewCourseFiles() {}
 	public static void viewInfo() {}
 	public static void viewMarks() {}
-	public static void viewTranscript() {}
 	public static void rateTeachers() {}
-	public static void getTranscript() {}
 	
 	
 	
