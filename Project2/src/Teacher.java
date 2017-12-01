@@ -13,8 +13,10 @@ public class Teacher extends Employee implements Serializable {
 	public Teacher(User teach) {
 		
 	}
-	
-	
+	public String a;
+	public Teacher(String a) {
+		this.a=a;
+	}
 	
 	public static void viewCourse() {
 		for (int i=0; i<DB.courses.size(); i++) {
