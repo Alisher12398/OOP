@@ -87,6 +87,26 @@ public class Admin extends User {
 		
 	}
 		
+	public static void AvailableMethods() throws IOException {
+		Scanner sc=new Scanner(System.in);
+				
+				System.out.println("Press 1 to add user");
+				System.out.println("Press 2 to edit user");
+				int method=sc.nextInt();
+				
+				switch (method) {
+				
+				case 1:
+					addUser();
+					break;
+					
+				case 2:
+					updateUser();
+					break;
+
+				}
+			
+			}
 	
 	
 	public static void updateUser() throws IOException {
