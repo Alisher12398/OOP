@@ -72,7 +72,7 @@ protected String name;
 		bw.close();
   }
   
-  	public void AvaiableMethods() {}
+  
   
   public User() { } 
 

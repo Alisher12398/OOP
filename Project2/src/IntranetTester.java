@@ -17,9 +17,9 @@ public class IntranetTester {
 		User.LogIn();
 		
 		System.out.println("Your Name: " + User.currentName);
-		System.out.println("Your status: " + User.currentStatus);
-		
-		
+		System.out.println("Your status: " + User.currentStatus + "\n");
+		Teacher a=new Teacher(); 
+		a.AvailableMethods();
 	}
 
 }
