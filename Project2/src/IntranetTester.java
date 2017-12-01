@@ -24,10 +24,13 @@ public class IntranetTester {
 		DB.userDataList.add(new User("zxcz","awd", "16BD11", "1q2w", "student"));
 		DB.userDataList.add(new User("asd","adw", "16BD12", "1q2w", "student"));
 		
+		
 		Teacher teacher = new Teacher();
 		Admin admin = new Admin();
 		Student student = new Student();
 		
+		DB.transferToStudent();
+	//	DB.transferToTeacher();
 		
 		User.LogIn();
 		

@@ -37,7 +37,7 @@ public class DB {
 	      	   // bw2.write((int) (studentDataList.get(q).attestation_2) );
 	      	   // bw2.write((int) (studentDataList.get(q).finalexam) );
 	      	  	bw2.newLine();	
-	      	  	System.out.println(Student.att1);
+	      	  	//System.out.println(Student.att1);
 			}
 		} catch(IOException e) {};
 		
@@ -61,7 +61,6 @@ public class DB {
 			for (int q=0; q<teacherDataList.size(); q++) {
 				bw3.write(teacherDataList.get(q).id);
 	      	  	bw3.newLine();	
-	      	  	System.out.println(Student.att1);
 			}
 		} catch(IOException e) {};
 		
