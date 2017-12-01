@@ -81,7 +81,7 @@ public class Teacher extends Employee implements Serializable {
 		
 		double m = 0;
 		System.out.println("Enter a mark");
-		
+		m=sc.nextDouble();
 		for (int i=0; i<DB.studentDataList.size(); i++) {
 			if (DB.studentDataList.get(i).equals(id)) {
 				DB.studentDataList.get(i).attestation_1=Student.attestation_1+m;
@@ -98,7 +98,7 @@ public class Teacher extends Employee implements Serializable {
 		
 		double m=0;
 		System.out.println("Enter a mark");
-		
+		m=sc.nextDouble();
 		for (int i=0; i<DB.studentDataList.size(); i++) {
 			if (DB.studentDataList.get(i).equals(id)) {
 				DB.studentDataList.get(i).attestation_2=Student.attestation_2+m;
@@ -115,7 +115,7 @@ public class Teacher extends Employee implements Serializable {
 		
 		double m=0;
 		System.out.println("Enter a mark");
-		
+		m=sc.nextDouble();
 		for (int i=0; i<DB.studentDataList.size(); i++) {
 			if (DB.studentDataList.get(i).equals(id)) {
 				DB.studentDataList.get(i).finalexam=Student.finalexam+m;
