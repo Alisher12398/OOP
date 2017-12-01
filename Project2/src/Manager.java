@@ -1,15 +1,37 @@
 import java.util.Scanner;
 
-import projectoop.ManagerType;
+
+
 
 public class Manager extends Employee {
-	private ManagerType type;
+	private TypeManager type;
 	 public Manager() {
 	        super();
 	    }
+	 public TypeManager getType() {
+	        return type;
+	    }
+	    public void setType(TypeManager type) {
+	    	this.type = type;
+	    }
+	 
+	 public int hashCode() {
+	        int result = super.hashCode();
+	        result = 31 * result + (type != null ? type.hashCode() : 0);
+	        return result;
+	    }
+	 
+	 public boolean equals(Object o) {
+	        if (this == o) return true;
+	        if (o == null || getClass() != o.getClass()) return false;
+	        if (!super.equals(o)) return false;
+
+	        Manager manager = (Manager) o;
+
+	        return type == manager.type;
+	    }
 	 
 	 
-	
     public void addCourse(Course course) {
     	
     	System.out.println("To add course write Teacher's ID");
@@ -28,9 +50,7 @@ public class Manager extends Employee {
         return 0;
     }
 
-    /**
-     * @return 
-     */
+    
     public int editNews() {
         return 0;
     }
