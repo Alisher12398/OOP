@@ -88,7 +88,7 @@ public class Teacher extends Employee implements Serializable {
 		
 	}
 	
-	public static  void putMarks1() {
+	public static  void putMarks1() throws IOException {
 		System.out.println("Enter Student's ID");
 		Scanner sc=new Scanner(System.in);
 		
@@ -100,12 +100,14 @@ public class Teacher extends Employee implements Serializable {
 		for (int i=0; i<DB.studentDataList.size(); i++) {
 			if (DB.studentDataList.get(i).equals(id)) {
 				DB.studentDataList.get(i).attestation_1=Student.attestation_1+m;
+				System.out.println("***" + DB.studentDataList.get(i).attestation_1 + " " + DB.studentDataList.get(i).overall);
 			}
 		}
+		IntranetTester.forExit();
 		
 	}
 	
-	public static void putMarks2() {
+	public static void putMarks2() throws IOException {
 		System.out.println("Enter Student's ID");
 		Scanner sc=new Scanner(System.in);
 		
@@ -119,10 +121,10 @@ public class Teacher extends Employee implements Serializable {
 				DB.studentDataList.get(i).attestation_2=Student.attestation_2+m;
 			}
 		}
-		
+		IntranetTester.forExit();
 	}
 	
-	public static void putMarks3() {
+	public static void putMarks3() throws IOException {
 		System.out.println("Enter Student's ID");
 		Scanner sc=new Scanner(System.in);
 		
@@ -136,7 +138,7 @@ public class Teacher extends Employee implements Serializable {
 				DB.studentDataList.get(i).finalexam=Student.finalexam+m;
 			}
 		}
-		
+		IntranetTester.forExit();
 	}
 	
 	public static void sendOrder() {

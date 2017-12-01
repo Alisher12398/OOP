@@ -17,11 +17,9 @@ public class Student extends User implements Serializable{
 	public Student() {}
 	
 	protected static double attestation_1=0, attestation_2=0, overall=0, finalexam=0;
-	public static int att1;
 	
 	public static void Calculate(){
 	overall = attestation_1+attestation_2+finalexam;
-	
 	}
 	
 	public static void AvailableMethods() throws IOException {
