@@ -86,7 +86,9 @@ Scanner sc=new Scanner(System.in);
 	
 	}
 	
-	public static void viewCourses() {}
+	public static void viewCourses() {
+		
+	}
 	public static void registerForCourses() {}
 	public static void viewCourseFiles() {}
 	public static void viewInfo() {}

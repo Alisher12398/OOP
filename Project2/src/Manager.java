@@ -1,11 +1,15 @@
 import java.util.Scanner;
 
-/**
- */
+import projectoop.ManagerType;
+
 public class Manager extends Employee {
-    /**
-     * @return 
-     */
+	private ManagerType type;
+	 public Manager() {
+	        super();
+	    }
+	 
+	 
+	
     public void addCourse(Course course) {
     	
     	System.out.println("To add course write Teacher's ID");
@@ -18,9 +22,8 @@ public class Manager extends Employee {
 			}
     }
     }
-    /**
-     * @return 
-     */
+    
+    
     public int editSchedule() {
         return 0;
     }
