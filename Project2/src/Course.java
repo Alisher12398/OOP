@@ -5,7 +5,7 @@ import java.util.LinkedHashSet;
 import java.util.Vector;
 
 public class Course implements Serializable {
-    private String name, id;
+    private String name, id, sc;
     private Teacher teacher;
     private HashSet<Student> students = new HashSet<>();
     private HashSet<Course> prerequisites = new HashSet<>();
@@ -13,10 +13,11 @@ public class Course implements Serializable {
     private int creditsNumber;
 
     public Course() { }
-
-    public Course(String name, String id, Teacher teacher, int creditsNumber) {
+    public Course(String sc) {
+    	this.sc = sc;
+    }
+    public Course(String name, Teacher teacher, int creditsNumber) {
         this.name = name;
-        this.id = id;
         this.teacher = teacher;
         this.creditsNumber = creditsNumber;
     }

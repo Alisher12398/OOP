@@ -45,6 +45,20 @@ public class Manager extends Employee {
     }
     }
     
+    public void addCoursesToTeacher() {
+    	System.out.println("Enter the Teacher's ID");
+    	Scanner in = new Scanner(System.in);
+    	String st = in.nextLine();
+    	System.out.println("Enter the course name");
+    	String st2 = in.nextLine();
+    	boolean q = false;
+    	for(int i = 0; i < DB.Teachercourses.size(); i++) {
+    		if(DB.Teachercourses.)
+    	}
+    	DB.Teachercourses.add(new Course(st, st2));
+    	
+    }
+    
     
     public int editSchedule() {
         return 0;

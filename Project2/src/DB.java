@@ -9,14 +9,16 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.*;
-import java.util.ArrayList;
-import java.util.List;
 
 public class DB {
 	 static List<User> userDataList = new ArrayList<User>();
 	 static List<Student> studentDataList = new ArrayList<Student>();
-	 static List<Course> courses = new ArrayList<Course>();
+	 static Vector<Course> Teachercourses = new Vector<Course>();
+	 static Vector<Course> Studentcourses = new Vector<Course>();
 	 static List<Teacher> teacherDataList = new ArrayList<Teacher>();	
+	 
+
+	 
 	 
 	 public static void transferToStudent() throws IOException  {
 			for (int i = 0; i < userDataList.size(); i++) {
