@@ -44,6 +44,77 @@ public class Student extends User implements Serializable{
 		this.end=end;
 		this.finalexam=finalexam;
 	}
+
+	public static void AvailableMethods() {
+Scanner sc=new Scanner(System.in);
+		
+		System.out.println("Press 1 to view courses");
+		System.out.println("Press 2 to register for courses");
+		System.out.println("Press 3 to view course files");
+		System.out.println("Press 4 to info about teacher of a specific course");
+		System.out.println("Press 5 to view marks");
+		System.out.println("Press 6 to view transcript");
+		System.out.println("Press 7 to rate teachers");
+		System.out.println("Press 8 to get transcript");
+		int method=sc.nextInt();
+		
+		switch (method) {
+		
+		case 1:
+			viewCourses();
+			break;
+			
+		case 2:
+			registerForCourses();
+			break;
+
+		case 3:
+			viewCourseFiles();
+			break;
+			
+		case 4:
+			viewInfo();
+			break;
+		case 5:
+			viewMarks();
+			break;
+		case 6:
+			viewTranscript();
+			break;
+		case 7:
+			rateTeachers();
+			break;
+		case 8: 
+			getTranscript();
+			break;
+		
+		}
+	
+	}
+	
+	public static void viewCourses() {}
+	public static void registerForCourses() {}
+	public static void viewCourseFiles() {}
+	public static void viewInfo() {}
+	public static void viewMarks() {}
+	public static void viewTranscript() {}
+	public static void rateTeachers() {}
+	public static void getTranscript() {}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	public Student (String id, double attestation_1) {
 		this.id=id;
