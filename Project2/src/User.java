@@ -72,6 +72,8 @@ protected String name;
 		bw.close();
   }
   
+  	public void AvaiableMethods() {}
+  
   public User() { } 
 
   public User(String name, String surname, String id, String password, String status) {

@@ -18,6 +18,8 @@ public class IntranetTester {
 		
 		System.out.println("Your Name: " + User.currentName);
 		System.out.println("Your status: " + User.currentStatus);
+		
+		
 	}
 
 }

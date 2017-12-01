@@ -2,6 +2,7 @@ import java.io.Serializable;
 import java.lang.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 import java.util.Vector;
 
 public class Teacher extends Employee implements Serializable {
@@ -24,6 +25,40 @@ public class Teacher extends Employee implements Serializable {
 	
 	public void manageCourseFiles() {
 	
+	}
+	
+	@Override
+	public void AvaiableMethods(){
+		Scanner sc=new Scanner(System.in);
+		
+		System.out.println("Press 1 to ");
+		System.out.println("Press 2 to ");
+		System.out.println("Press 3 to ");
+		System.out.println("Press 4 to ");
+		
+		int method=sc.nextInt();
+		
+		switch (method) {
+		
+		case 1:
+			
+			break;
+			
+		case 2:
+			
+			break;
+
+		case 3:
+			
+			break;
+			
+		case 4:
+			
+			break;
+			
+		
+		}
+		
 	}
 	
 	public void viewStudents() {
