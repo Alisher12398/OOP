@@ -14,20 +14,23 @@ public class Teacher extends Employee implements Serializable {
 	public Teacher() {}
 	
 	public String a;
-	public Teacher(String a) {
-		this.a=a;
+	
+	public Teacher(String id) {
+		super.id=id;
 	}
 	
 	public static void viewCourse() {
-		for (int i=0; i<DB.courses.size(); i++) {
+		/*for (int i=0; i<DB.courses.size(); i++) {
 			System.out.println(DB.courses.get(i) + "\n");
-		}
+		}*/
 		
 	}
 	
 	public void manageCourseFiles() {
 	
 	}
+	
+	
 	
 	public static void AvailableMethods() throws IOException{
 		Scanner sc=new Scanner(System.in);
@@ -68,6 +71,8 @@ public class Teacher extends Employee implements Serializable {
 			break;	
 			
 		case 7:
+			System.out.println("\n" + "\n" + "\n" + "\n" + "************************************" +
+					"************************************" + "\n" + "\n" + "\n" + "\n");
 			IntranetTester.forExit();
 			break;
 		}

@@ -52,10 +52,11 @@ public class Manager extends Employee {
     	System.out.println("Enter the course name");
     	String st2 = in.nextLine();
     	boolean q = false;
+    	Teacher sq=new Teacher(st);
     	for(int i = 0; i < DB.Teachercourses.size(); i++) {
-    		if(DB.Teachercourses.)
+    	
     	}
-    	DB.Teachercourses.add(new Course(st, st2));
+    	//DB.Teachercourses.add(new Course(st, sq,3));
     	
     }
     

@@ -106,6 +106,8 @@ public class Admin extends User {
 					break;
 				
 				case 3:
+					System.out.println("\n" + "\n" + "\n" + "\n" + "************************************" +
+				"************************************" + "\n" + "\n" + "\n" + "\n");
 					IntranetTester.forExit();
 					break;
 

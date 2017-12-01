@@ -59,12 +59,12 @@ public class DB {
 		BufferedReader bf3 = new BufferedReader(new FileReader("C:\\OOPGit\\OOP\\Project2\\teachers.txt"));
 		BufferedWriter bw3 = new BufferedWriter(new FileWriter("C:\\OOPGit\\OOP\\Project2\\teachers.txt"));
 		
-		try {
+		/*try {
 			for (int q=0; q<teacherDataList.size(); q++) {
 				bw3.write(teacherDataList.get(q).id);
 	      	  	bw3.newLine();	
 			}
-		} catch(IOException e) {};
+		} catch(IOException e) {};*/
 		
 		bw3.close();
 		bf3.close();

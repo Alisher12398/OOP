@@ -60,6 +60,8 @@ Scanner sc=new Scanner(System.in);
 			rateTeachers();
 			break;
 		case 7:
+			System.out.println("\n" + "\n" + "\n" + "\n" + "************************************" +
+					"************************************" + "\n" + "\n" + "\n" + "\n");
 			IntranetTester.forExit();
 			break;
 		}
