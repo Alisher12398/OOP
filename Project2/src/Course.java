@@ -13,7 +13,7 @@ public class Course {
 	public void addStudent(Student student) {
 		for(int i = 0; i < students.length; i++) {
 			if(student == students[i]) 
-				continue;
+				continue;3
 			
 			if(students[i] == null) {
 				students[i] = student;

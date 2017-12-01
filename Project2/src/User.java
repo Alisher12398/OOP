@@ -8,7 +8,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class User {
- protected String name;
+public static String currentName;
+public static String currentStatus;
+protected String name;
  protected String surname;
  protected String password;
  protected String status;
@@ -52,6 +54,8 @@ public class User {
 				String loginPassword=in.nextLine();
 					if (DB.userDataList.get(i).password.equals(loginPassword)) {
 						reg=true;
+						currentName=DB.userDataList.get(i).name;
+						currentStatus=DB.userDataList.get(i).status;
 					}
 			}
 		

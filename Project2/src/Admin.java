@@ -11,21 +11,9 @@ import java.util.Scanner;
 import java.util.List;
 
 public class Admin extends User {
-	
-	public static void main(String args[]) throws IOException {
-		
-		addUser();
-		addUser();
-		addUser();
-		DB.transferToStudent();
-		//removeUser();
-		//updateUser();
-		//LogIn();
-	//	
-	}
 
 	public static void addUser() throws IOException {
-		System.out.println("Write info about new User" + "\n" + "Name" + "\n" + "Surname" + "\n" + "ID" + "\n" + "Password");
+		System.out.println("Write info about new User" + "\n" + "Name" + "\n" + "Surname" + "\n" + "ID" + "\n" + "Password" + "\n" + "Status");
 		
 		Scanner in = new Scanner(System.in);
 		
