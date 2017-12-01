@@ -47,7 +47,7 @@ public class Student extends User implements Serializable{
 		this.finalexam=finalexam;
 	}
 
-	public static void AvailableMethods() {
+	public static void AvailableMethods() throws IOException {
 Scanner sc=new Scanner(System.in);
 		
 		System.out.println("Press 1 to view courses");
@@ -56,6 +56,7 @@ Scanner sc=new Scanner(System.in);
 		System.out.println("Press 4 to info about teacher of a specific course");
 		System.out.println("Press 5 to view marks");
 		System.out.println("Press 6 to rate teachers");
+		System.out.println("Press 7 to exit");
 		int method=sc.nextInt();
 		
 		switch (method) {
@@ -81,7 +82,9 @@ Scanner sc=new Scanner(System.in);
 		case 6:
 			rateTeachers();
 			break;
-		
+		case 7:
+			IntranetTester.forExit();
+			break;
 		}
 	
 	}

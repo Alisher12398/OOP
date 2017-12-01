@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.io.Serializable;
 
 import java.lang.*;
@@ -28,7 +29,7 @@ public class Teacher extends Employee implements Serializable {
 	
 	}
 	
-	public static void AvailableMethods(){
+	public static void AvailableMethods() throws IOException{
 		Scanner sc=new Scanner(System.in);
 		
 		System.out.println("Press 1 to view courses");
@@ -37,7 +38,7 @@ public class Teacher extends Employee implements Serializable {
 		System.out.println("Press 4 to put marks to 2nd attestation");
 		System.out.println("Press 5 to put marks to final exam");
 		System.out.println("Press 6 to send order");
-		
+		System.out.println("Press 7 to exit");
 		int method=sc.nextInt();
 		
 		switch (method) {
@@ -65,7 +66,13 @@ public class Teacher extends Employee implements Serializable {
 		case 6:
 			sendReport();
 			break;	
+			
+		case 7:
+			IntranetTester.forExit();
+			break;
 		}
+		
+		
 		
 	}
 	

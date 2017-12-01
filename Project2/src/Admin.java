@@ -92,6 +92,7 @@ public class Admin extends User {
 				
 				System.out.println("Press 1 to add user");
 				System.out.println("Press 2 to edit user");
+				System.out.println("Press 3 to exit");
 				int method=sc.nextInt();
 				
 				switch (method) {
@@ -102,6 +103,10 @@ public class Admin extends User {
 					
 				case 2:
 					updateUser();
+					break;
+				
+				case 3:
+					IntranetTester.forExit();
 					break;
 
 				}
