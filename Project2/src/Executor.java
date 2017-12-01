@@ -1,25 +1,10 @@
-/**
- */
-public class Executor extends User {
-    /**
-     * @return 
-     */
-    public int viewReports() {
-        return 0;
-    }
+import java.io.Serializable;
+import java.util.Vector;
 
-    /**
-     * @return 
-     */
-    public int acceptReport() {
-        return 0;
-    }
-
-    /**
-     * @return 
-     */
-    public int fixProblem() {
-        return 0;
-    }
+public class Executor extends Employee {
+	Vector<Order> orders = new Vector<>();
+	
+	public Executor() {
+		super();
+	}
 }
-
