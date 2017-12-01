@@ -12,17 +12,20 @@ public class Teacher extends Employee implements Serializable {
 	private Degree degree = Degree.MASTER;
 	Vector<Course> courses = new Vector<Course>();
 	public Teacher() {}
-	
+	public static String id;
 	public String a;
 	
 	public Teacher(String id) {
-		super.id=id;
+		this.id=id;
 	}
 	
 	public static void viewCourse() {
 		/*for (int i=0; i<DB.courses.size(); i++) {
 			System.out.println(DB.courses.get(i) + "\n");
 		}*/
+		for (int i=0; i<DB.Teachercourses.size(); i++) {
+			System.out.println(DB.Teachercourses.get(i) + " ");
+		}
 		
 	}
 	

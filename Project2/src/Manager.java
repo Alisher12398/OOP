@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.util.Scanner;
 
 
@@ -45,20 +46,47 @@ public class Manager extends Employee {
     }
     }
     
-    public void addCoursesToTeacher() {
-    	System.out.println("Enter the Teacher's ID");
-    	Scanner in = new Scanner(System.in);
-    	String st = in.nextLine();
-    	System.out.println("Enter the course name");
-    	String st2 = in.nextLine();
-    	boolean q = false;
-    	Teacher sq=new Teacher(st);
-    	for(int i = 0; i < DB.Teachercourses.size(); i++) {
+    public static void addCoursesToTeacher() {
+    	System.out.println("Enter Teacher's ID");
+    	Scanner sc= new Scanner(System.in);
     	
+    	String st1= sc.nextLine();
+    	
+    	for (int i=0; i<DB.teacherDataList.size(); i++) {
+    		if (DB.teacherDataList.get(i).id.equals(st1)) {
+    			System.out.println("Enter course name");
+    			String st2=sc.nextLine();
+    			DB.Teachercourses.add(new Course(st2));
+    		}
     	}
-    	//DB.Teachercourses.add(new Course(st, sq,3));
     	
     }
+    
+    
+    public static void AvailableMethods() throws IOException{
+		Scanner sc=new Scanner(System.in);
+		
+		System.out.println("Press 1 to add course to teacher");
+		System.out.println("Press 2 to exit");
+		int method=sc.nextInt();
+		
+		switch (method) {
+		
+		case 1:
+			addCoursesToTeacher();
+			break;
+			
+		case 2:
+			System.out.println("\n" + "\n" + "\n" + "\n" + "************************************" +
+					"************************************" + "\n" + "\n" + "\n" + "\n");
+			IntranetTester.forExit();
+			break;
+		}
+		
+		
+		
+	}
+    
     
     
     public int editSchedule() {

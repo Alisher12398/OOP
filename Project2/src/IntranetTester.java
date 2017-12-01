@@ -13,6 +13,7 @@ public class IntranetTester {
 		Teacher teacher = new Teacher();
 		Admin admin = new Admin();
 		Student student = new Student();
+		Manager manager = new Manager();
 		
 		User.LogIn();
 		
@@ -31,6 +32,10 @@ public class IntranetTester {
 			
 			case "teacher":
 				teacher.AvailableMethods();
+			break;
+			
+			case "manager":
+				manager.AvailableMethods();
 			break;
 	
 		}
@@ -55,6 +60,7 @@ public class IntranetTester {
 		DB.userDataList.add(new User("zxc","awd", "16BD11", "1q2w", "student"));
 		DB.userDataList.add(new User("zxcz","awd", "16BD11", "1q2w", "student"));
 		DB.userDataList.add(new User("asd","adw", "16BD12", "1q2w", "student"));
+		DB.userDataList.add(new User("asd","adw", "16BD13", "1q2w", "manager"));
 		
 		DB.transferToStudent();
 		DB.transferToTeacher();
