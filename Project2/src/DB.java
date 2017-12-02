@@ -34,12 +34,11 @@ public class DB {
 		
 		try {
 			for (int q=0; q<studentDataList.size(); q++) {
-				bw2.write(studentDataList.get(q).id);
-	      	    bw2.write(studentDataList.get(q).att1);
-	      	   // bw2.write((int) (studentDataList.get(q).attestation_2) );
-	      	   // bw2.write((int) (studentDataList.get(q).finalexam) );
+				bw2.write(studentDataList.get(q).id + " " + studentDataList.get(q).attestation_1 + " " + 
+			studentDataList.get(q).attestation_2 + " " + 
+			studentDataList.get(q).finalexam + " " + 
+			studentDataList.get(q).overall);
 	      	  	bw2.newLine();	
-	      	  	//System.out.println(Student.att1);
 			}
 		} catch(IOException e) {};
 		
@@ -59,16 +58,16 @@ public class DB {
 		BufferedReader bf3 = new BufferedReader(new FileReader("C:\\OOPGit\\OOP\\Project2\\teachers.txt"));
 		BufferedWriter bw3 = new BufferedWriter(new FileWriter("C:\\OOPGit\\OOP\\Project2\\teachers.txt"));
 		
-		/*try {
+		try {
 			for (int q=0; q<teacherDataList.size(); q++) {
 				bw3.write(teacherDataList.get(q).id);
 	      	  	bw3.newLine();	
 			}
-		} catch(IOException e) {};*/
+		} catch(IOException e) {};
 		
 		bw3.close();
 		bf3.close();
 			}
 	 }
 	 
-}
+} 

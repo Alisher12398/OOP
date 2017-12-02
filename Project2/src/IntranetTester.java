@@ -4,8 +4,7 @@ import java.util.*;
 
 public class IntranetTester {
 	
-	private static final int PAGE_SIZE = 25;
-
+	public static String status2=null;
 	public static void forExit() throws IOException {
 
 		
@@ -20,6 +19,39 @@ public class IntranetTester {
 		System.out.println("Your Name: " + User.currentName);
 		System.out.println("Your status: " + User.currentStatus + "\n");
 
+		switch (User.currentStatus) {
+		
+			case "student":
+				student.AvailableMethods();
+				
+			break;
+			
+			case "admin":
+				admin.AvailableMethods();
+				
+			break;
+			
+			case "teacher":
+				teacher.AvailableMethods();
+				
+			break;
+			
+			case "manager":
+				manager.AvailableMethods();
+			
+			break;
+	
+		}
+	}
+	
+	public static void Repeat() throws IOException {
+		System.out.println("Your Name: " + User.currentName);
+		System.out.println("Your status: " + User.currentStatus + "\n");
+		Teacher teacher = new Teacher();
+		Admin admin = new Admin();
+		Student student = new Student();
+		Manager manager = new Manager();
+		
 		switch (User.currentStatus) {
 		
 			case "student":
@@ -40,7 +72,6 @@ public class IntranetTester {
 	
 		}
 	}
-	
 	
 	public static void main(String[] args) throws IOException, ClassNotFoundException {
 		Scanner in = new Scanner(System.in);
