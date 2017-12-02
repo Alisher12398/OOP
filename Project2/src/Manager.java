@@ -88,14 +88,6 @@ public class Manager extends Employee {
 	}
     
     
-    
-    public int editSchedule() {
-        return 0;
-    }
-
-    
-    public int editNews() {
-        return 0;
-    }
+   
 }
 
